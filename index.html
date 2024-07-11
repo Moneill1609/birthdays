@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Aivy!</title>
+    <style>
+        body {
+            background-color:beige;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+
+        h1, h2 {
+            margin: 10px 0;
+        }
+
+        button {
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        button:hover {
+            background-color: #e91e63;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .balloons {
+            position: relative;
+            height: 200px;
+            margin-top: 20px;
+            z-index: 5;
+        }
+
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 70px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            bottom: 0;
+            animation: float 4s ease-in-out infinite;
+            z-index: 5;
+        }
+
+        #balloon1 {
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        #balloon2 {
+            left: 50%;
+            animation-delay: 1s;
+        }
+
+        #balloon3 {
+            left: 80%;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-100px);
+            }
+        }
+
+        .confetti {
+            position: absolute;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color:darkturquoise;
+            animation: fall linear infinite;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        .confetti:nth-child(odd) {
+            background-color: #ff4081;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }s
+           #hiddenMessage {
+            margin-top: 20px; /* Adjust top margin */
+            line-height: 1.6; /* Adjust line height for better readability */
+        }
+         
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday!!!</h1>
+        <h2>To My Lovely and Pretty Girlfriend!</h2>
+        <h3>"Before that Jangan lupa tekan play lagu dulu" HEHEHE</h3>
+        <button id="revealMessage">Click to Reveal Moneill's Surprise!</button>
+        <p id="hiddenMessage" class="hidden">Happy Blessed Birthday Sayang! By the way why i choose that picture is because its the first gambar bersama kita.Thats why i also put lagu Bunga-Delorians sebab thats the song played in my head when we first met.Anyway i would like to say thank you for everything and becoming a understandings girlfriend! Now baby already turn 21 years old liao oh.So today is the oldest you have been, and become the bravest version of you so far, im proud of you baby for everything you have done in your life to survive. Im also glad i could take part in your story.Semoga sihat selalu and always be yourself because that the thing that makes me fall for you.All the best also for last our last SEM. Hope we can graduate together. and yeah lets make memories together more.Wishing you all the happiness in the world,Enjoy ur very special day and god bless you And last but not least i would remind you that i love you always Aivy Edwina Tan!
+        
+        
+            -Sincerely from Moneill-
+        </p>
+        <div class="balloons">
+            <div class="balloon" id="balloon1"></div>
+            <div class="balloon" id="balloon2"></div>
+            <div class="balloon" id="balloon3"></div>
+        </div>
+    <!-- SVG flower -->
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 100px; left: 50px;">
+        <circle cx="100" cy="50" r="40" fill="pink" />
+        <circle cx="70" cy="80" r="40" fill="pink" />
+        <circle cx="130" cy="80" r="40" fill="pink" />
+        <circle cx="100" cy="110" r="40" fill="pink" />
+        <circle cx="100" cy="80" r="20" fill="yellow" />
+          </svg>
+      <!-- SVG flower -->
+    
+    <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: 10px; right: 50px;">
+        <circle cx="100" cy="50" r="40" fill="pink" />
+        <circle cx="70" cy="80" r="40" fill="pink" />
+        <circle cx="130" cy="80" r="40" fill="pink" />
+        <circle cx="100" cy="110" r="40" fill="pink" />
+        <circle cx="100" cy="80" r="20" fill="yellow" />
+    </svg>
+    </div>
+
+
+    
+     <img src="PertemuankuDengannya.jpg" id="flowerImage" class="hidden" style="max-width: 100%; height: auto;">
+    
+   <!-- Background Music -->
+    <audio id="backgroundMusic" controls autoplay loop style="position: absolute; bottom: 20px; left: 20px;">
+        <source src="BungaDelorians.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('revealMessage').addEventListener('click', function() {
+                document.getElementById('hiddenMessage').classList.toggle('hidden');
+                    document.getElementById('flowerImage').classList.toggle('hidden');
+                // Add confetti
+                for (let i = 0; i < 100; i++) {
+                    let confetti = document.createElement('div');
+                    confetti.classList.add('confetti');
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.animationDuration = Math.random() * 3 + 2 + 's';
+                    confetti.style.backgroundColor = getRandomColor();
+                    document.body.appendChild(confetti);
+                }
+            });
+              
+            function getRandomColor() {
+                let colors = ['#ff4081', '#ffffff', '#ffeb3b', '#4caf50', '#2196f3'];
+                return colors[Math.floor(Math.random() * colors.length)];
+            }
+        });
+    </script>
+</body>
+</html>
